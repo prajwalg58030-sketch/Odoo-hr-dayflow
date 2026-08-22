@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAYFLOW HRMS - Every workday, perfectly aligned</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body class="landing-page">
+    <!-- Navbar - Simplified with only DAYFLOW HR -->
+    <nav class="navbar navbar-light">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-logo-wrapper">
+                    <svg class="nav-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="12" fill="#4F46E5" />
+                        <path d="M11 20L16 15L21 20L26 15L31 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11 25L16 20L21 25L26 20L31 25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="16" cy="15" r="1.5" fill="white" />
+                        <circle cx="26" cy="15" r="1.5" fill="white" />
+                    </svg>
+                </div>
+                <span class="nav-brand-text">DAYFLOW</span>
+                <span class="nav-brand-badge">HR</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <div class="bg-gradient"></div>
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+            <div class="bg-shape bg-shape-3"></div>
+            <div class="bg-shape bg-shape-4"></div>
+            <div class="bg-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Trusted by 500+ companies
+            </div>
+            <h1 class="hero-title">
+                Every workday,<br />
+                <span class="hero-title-highlight">perfectly aligned.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Manage employees, attendance, time off, and payroll from one
+                professional HR platform.
+            </p>
+            
+            <!-- Primary Actions Row -->
+            <div class="hero-cta-row hero-cta-primary">
+                <a href="register.html" class="btn btn-primary btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    Get Started
+                </a>
+                <a href="login.html" class="btn btn-outline btn-lg">Sign In</a>
+                <a href="#capabilities" class="btn btn-ghost btn-lg">Learn More</a>
+            </div>
+
+            <!-- Divider -->
+            <div class="hero-divider">
+                <span class="hero-divider-line"></span>
+                <span class="hero-divider-text">Quick Access</span>
+                <span class="hero-divider-line"></span>
+            </div>
+
+            <!-- Quick Access Row -->
+            <div class="hero-cta-row hero-cta-secondary">
+                <a href="admin/dashboard.html" class="btn btn-admin btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 18L10 2L18 18L14 15L10 18L6 15L2 18Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 9L10 12L14 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Admin Dashboard
+                </a>
+                <a href="employee/dashboard.html" class="btn btn-employee btn-lg">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="6" r="4" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 18V16C2 12.6863 4.68629 10 8 10H12C15.3137 10 18 12.6863 18 16V18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Employee Dashboard
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">12k+</span>
+                    <span class="hero-stat-label">Active Users</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">98%</span>
+                    <span class="hero-stat-label">Satisfaction Rate</span>
+                </div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">4.9★</span>
+                    <span class="hero-stat-label">Average Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section class="section capabilities" id="capabilities">
+        <div class="section-header">
+            <span class="section-tag">Features</span>
+            <h2 class="section-title">Core Capabilities</h2>
+            <p class="section-subtitle">Everything you need to manage your workforce efficiently</p>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <div class="feature-icon">👥</div>
+                </div>
+                <h3>Employee Management</h3>
+                <p>Create, manage, and organize employee profiles with auto-generated credentials.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <div class="feature-icon">🕒</div>
+                </div>
+                <h3>Attendance Tracking</h3>
+                <p>Check-in, check-out, work hours, and overtime calculated automatically.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <div class="feature-icon">🏖️</div>
+                </div>
+                <h3>Time Off</h3>
+                <p>Streamlined leave requests, approvals, and balance management.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <div class="feature-icon">💰</div>
+                </div>
+                <h3>Payroll</h3>
+                <p>Configurable salary components with automated calculations.</p>
+                <a href="#" class="feature-link">Learn more →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee & HR Experience -->
+    <section class="section experience">
+        <div class="section-header">
+            <span class="section-tag">Experience</span>
+            <h2 class="section-title">Built for both HR and Employees</h2>
+            <p class="section-subtitle">Two powerful experiences, one unified platform</p>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <div class="experience-card-icon">🏢</div>
+                <h3>For HR / Admin</h3>
+                <ul>
+                    <li>Dashboard with real-time metrics</li>
+                    <li>Manage employees and documents</li>
+                    <li>Approve or reject leave requests</li>
+                    <li>Configure salary structures and view payroll</li>
+                </ul>
+                <a href="admin/dashboard.html" class="experience-cta-btn btn btn-admin">Access Admin</a>
+            </div>
+            <div class="experience-card">
+                <div class="experience-card-icon">👤</div>
+                <h3>For Employees</h3>
+                <ul>
+                    <li>View personal dashboard and attendance</li>
+                    <li>Apply for time off</li>
+                    <li>Track leave balances and salary</li>
+                    <li>Check in and check out with one click</li>
+                </ul>
+                <a href="employee/dashboard.html" class="experience-cta-btn btn btn-employee">Access Employee</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="section security">
+        <div class="section-header">
+            <span class="section-tag">Security</span>
+            <h2 class="section-title">Enterprise-Grade Security</h2>
+            <p class="section-subtitle">Your data is protected with industry-leading security standards</p>
+        </div>
+        <div class="security-grid">
+            <div class="security-item">
+                <span class="security-icon">🔒</span>
+                <span>JWT Authentication</span>
+            </div>
+            <div class="security-item">
+                <span class="security-icon">🔑</span>
+                <span>Bcrypt Password Hashing</span>
+            </div>
+            <div class="security-item">
+                <span class="security-icon">🛡️</span>
+                <span>Role-Based Access Control</span>
+            </div>
+            <div class="security-item">
+                <span class="security-icon">📄</span>
+                <span>Encrypted Data Storage</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="cta-card">
+            <div class="cta-content">
+                <h2>Ready to transform your HR operations?</h2>
+                <p>Join thousands of companies using DAYFLOW to streamline their workforce management.</p>
+                <div class="cta-buttons">
+                    <a href="register.html" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="login.html" class="btn btn-outline btn-lg">Sign In</a>
+                    <a href="admin/dashboard.html" class="btn btn-admin btn-lg">Admin</a>
+                    <a href="employee/dashboard.html" class="btn btn-employee btn-lg">Employee</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-brand-link">
+                    <svg class="footer-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="12" fill="#4F46E5" />
+                        <path d="M11 20L16 15L21 20L26 15L31 20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M11 25L16 20L21 25L26 20L31 25" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="16" cy="15" r="1.5" fill="white" />
+                        <circle cx="26" cy="15" r="1.5" fill="white" />
+                    </svg>
+                    <span>DAYFLOW</span>
+                    <span class="footer-brand-badge">HR</span>
+                </a>
+                <p class="footer-tagline">Every workday, perfectly aligned.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+            </div>
+            <p class="footer-copyright">&copy; 2026 DAYFLOW HRMS. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

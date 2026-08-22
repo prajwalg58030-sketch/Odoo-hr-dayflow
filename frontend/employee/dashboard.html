@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - DAYFLOW HRMS</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/attendance.css">
+    <link rel="stylesheet" href="../css/employee.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar will be injected by navigation.js -->
+        <aside class="sidebar" id="sidebar"></aside>
+        <div class="main-wrapper">
+            <nav class="navbar" id="navbar"></nav>
+            <main class="main-content">
+                <div class="page-header">
+                    <h1 class="page-title">Good morning, <span id="employeeName">Employee</span></h1>
+                    <p class="page-date" id="currentDate"></p>
+                </div>
+                <div class="dashboard-grid">
+                    <!-- Cards will be populated by dashboard.js -->
+                    <div class="card" id="attendanceStatusCard">
+                        <div class="card-header">
+                            <h3>Today's Attendance</h3>
+                        </div>
+                        <div class="card-body" id="attendanceStatusContent">
+                            <!-- Status will be shown here -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Work Hours</h3></div>
+                        <div class="card-body"><h2 id="workHours">0h</h2></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Extra Hours</h3></div>
+                        <div class="card-body"><h2 id="extraHours">0h</h2></div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header"><h3>Leave Balance</h3></div>
+                        <div class="card-body" id="leaveBalance">-</div>
+                    </div>
+                </div>
+                <div class="dashboard-section">
+                    <h2>Recent Activity</h2>
+                    <div id="recentActivity">Loading...</div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/employee/dashboard.js"></script>
+</body>
+</html>

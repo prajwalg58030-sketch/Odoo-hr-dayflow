@@ -1,0 +1,33 @@
+/* Payroll specific */
+.salary-breakdown {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.salary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.salary-row.total {
+    font-weight: 700;
+    border-top: 2px solid var(--gray-200);
+    border-bottom: none;
+    font-size: 1.125rem;
+}
+
+.earnings-section {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.deductions-section {
+    background: #fef2f2;
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+}

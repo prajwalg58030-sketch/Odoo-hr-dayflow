@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Company - DAYFLOW HRMS</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-left">
+            <div class="auth-brand">
+                <img src="assets/logos/dayflow-logo.svg" alt="DAYFLOW Logo" class="auth-logo">
+                <h1>DAYFLOW HRMS</h1>
+                <p>Every workday, perfectly aligned.</p>
+            </div>
+        </div>
+        <div class="auth-right">
+            <div class="auth-card">
+                <h2>Register Your Company</h2>
+                <p class="auth-subtitle">Create your HR account</p>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="companyName">Company Name</label>
+                        <input type="text" id="companyName" required placeholder="Acme Inc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Jane Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Work Email</label>
+                        <input type="email" id="email" required placeholder="hr@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" required placeholder="+1 555 123 456">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="password-field">
+                            <input type="password" id="password" required minlength="8" placeholder="Minimum 8 characters">
+                            <button type="button" class="toggle-password" aria-label="Show password">👁</button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="logo">Company Logo</label>
+                        <input type="file" id="logo" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="registerBtn">Create Account</button>
+                    <div class="auth-links">
+                        <a href="login.html">Already have an account? Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/notifications.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

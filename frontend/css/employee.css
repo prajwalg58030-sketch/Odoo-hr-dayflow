@@ -1,0 +1,84 @@
+/* Employee specific styles */
+.profile-info-item {
+    margin-bottom: var(--spacing-md);
+}
+
+.profile-info-label {
+    font-weight: 600;
+    color: var(--gray-600);
+    font-size: 0.875rem;
+}
+
+.profile-info-value {
+    color: var(--gray-900);
+}
+
+.attendance-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.attendance-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.summary-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.summary-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.summary-label {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+}
+
+.leave-balance-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.balance-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.balance-card .leave-type {
+    font-weight: 600;
+    margin-bottom: var(--spacing-xs);
+}
+
+.balance-card .available-days {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-600);
+}
+
+.balance-progress {
+    height: 8px;
+    background: var(--gray-100);
+    border-radius: 4px;
+    margin-top: var(--spacing-sm);
+}
+
+.balance-progress-bar {
+    height: 100%;
+    border-radius: 4px;
+    background: var(--primary-500);
+}

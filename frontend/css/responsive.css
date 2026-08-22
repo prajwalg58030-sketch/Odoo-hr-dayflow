@@ -1,0 +1,177 @@
+/* Responsive design */
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        padding: var(--spacing-lg);
+    }
+    .hero-title {
+        font-size: 3rem;
+    }
+    .section {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .app-layout {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: transform var(--transition-base);
+        width: 240px !important;
+        z-index: 150;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 140;
+    }
+    .sidebar-overlay.open {
+        display: block;
+    }
+    .navbar {
+        padding: 0.5rem var(--spacing-lg);
+    }
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+    .table {
+        font-size: 0.75rem;
+    }
+    .table th,
+    .table td {
+        padding: 0.5rem;
+    }
+    .metric-grid,
+    .dashboard-grid,
+    .employee-grid {
+        grid-template-columns: 1fr;
+    }
+    .attendance-summary,
+    .leave-balance-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .filter-bar .btn {
+        margin-left: 0;
+    }
+
+    /* Landing page responsive */
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) var(--spacing-lg);
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .hero-badge {
+        font-size: 0.75rem;
+    }
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+    }
+    .hero-stat-divider {
+        display: none;
+    }
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    .cta-card {
+        padding: var(--spacing-xl);
+    }
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: var(--spacing-md);
+    }
+    .page-title {
+        font-size: 1.5rem;
+    }
+    .auth-card {
+        padding: var(--spacing-lg);
+    }
+    .hero-title {
+        font-size: 2rem;
+    }
+    .hero-subtitle {
+        font-size: 0.9375rem;
+    }
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+    .attendance-summary,
+    .leave-balance-cards {
+        grid-template-columns: 1fr;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .security-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .nav-brand-badge {
+        display: none;
+    }
+    .nav-brand-text {
+        font-size: 1rem;
+    }
+    .nav-actions .btn-sm {
+        padding: 0.3125rem 0.625rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}

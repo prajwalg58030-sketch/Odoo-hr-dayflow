@@ -1,0 +1,40 @@
+/* Leave specific */
+.leave-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--gray-50);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.calendar-day:hover {
+    background: var(--primary-50);
+}
+
+.calendar-day.has-leave {
+    position: relative;
+}
+
+.calendar-day.has-leave::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary-500);
+}
+
+.calendar-day.approved::after { background: var(--success-500); }
+.calendar-day.pending::after { background: var(--warning-500); }
+.calendar-day.rejected::after { background: var(--danger-500); }

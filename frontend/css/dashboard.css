@@ -1,0 +1,31 @@
+/* Dashboard specific */
+.dashboard-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.activity-list {
+    list-style: none;
+}
+
+.activity-item {
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.activity-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary-50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}

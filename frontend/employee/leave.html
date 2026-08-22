@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Off - DAYFLOW HRMS</title>
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/leave.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar" id="sidebar"></aside>
+        <div class="main-wrapper">
+            <nav class="navbar" id="navbar"></nav>
+            <main class="main-content">
+                <div class="page-header">
+                    <h1 class="page-title">Time Off</h1>
+                    <a href="apply-leave.html" class="btn btn-primary">Apply for Leave</a>
+                </div>
+                <div class="leave-balance-cards" id="leaveBalanceCards">
+                    <!-- Populated by leave.js -->
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3>My Leave Requests</h3></div>
+                    <div class="card-body" id="leaveRequestsContainer">
+                        <!-- Table populated by leave.js -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h3>Leave Calendar</h3></div>
+                    <div class="card-body" id="leaveCalendar">
+                        <!-- Calendar view -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="../js/config.js"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/session.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/notifications.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/employee/leave.js"></script>
+</body>
+</html>

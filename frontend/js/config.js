@@ -1,0 +1,4 @@
+const CONFIG = {
+    API_BASE_URL: 'http://localhost:5000/api',
+    FRONTEND_URL: 'http://localhost:5500'
+};
