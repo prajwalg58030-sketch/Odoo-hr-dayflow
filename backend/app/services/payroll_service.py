@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 from ..models import Salary, Employee, Attendance
-from .. import db
+from app.config.database import db
 from ..errors.exceptions import APIError
 
 class PayrollService:

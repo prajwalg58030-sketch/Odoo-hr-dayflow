@@ -1,6 +1,6 @@
 from datetime import datetime, date, timedelta
 from ..models import Attendance, Employee
-from .. import db
+from app.config.database import db
 from ..errors.exceptions import APIError
 
 class AttendanceService:

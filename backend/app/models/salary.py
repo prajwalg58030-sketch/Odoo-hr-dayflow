@@ -1,4 +1,4 @@
-from .. import db
+from app.config.database import db
 from datetime import datetime, date
 
 class Salary(db.Model):

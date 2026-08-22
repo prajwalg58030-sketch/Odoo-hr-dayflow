@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
 from flask import current_app
 from flask_jwt_extended import create_access_token
-from ..models import User, Employee, EmailVerificationToken
-from .. import db
+from ..models import User, Employee
+from app.config.database import db
 from ..utils.security import hash_password, verify_password, generate_temp_password, generate_verification_token, generate_login_id
 from ..utils.validators import validate_email
 from ..errors.exceptions import APIError

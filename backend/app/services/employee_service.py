@@ -1,6 +1,6 @@
 from datetime import datetime
 from ..models import User, Employee
-from .. import db
+from app.config.database import db
 from ..utils.security import hash_password, generate_temp_password, generate_login_id
 from ..utils.validators import validate_email, validate_phone
 from ..errors.exceptions import APIError

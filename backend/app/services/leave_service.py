@@ -1,6 +1,6 @@
 from datetime import datetime, date
-from ..models import LeaveRequest, LeaveType, LeaveAllocation, Employee
-from .. import db
+from ..models import LeaveRequest, LeaveType, Employee
+from app.config.database import db
 from ..errors.exceptions import APIError
 
 class LeaveService:

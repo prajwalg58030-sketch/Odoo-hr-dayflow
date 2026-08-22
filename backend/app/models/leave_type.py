@@ -1,4 +1,4 @@
-from .. import db
+from app.config.database import db
 
 class LeaveType(db.Model):
     __tablename__ = 'leave_types'
