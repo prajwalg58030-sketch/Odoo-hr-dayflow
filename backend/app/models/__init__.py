@@ -5,8 +5,8 @@ from .leave_type import LeaveType
 from .leave_request import LeaveRequest
 from .salary import Salary
 from .employee_document import EmployeeDocument
-from .leave_allocation import LeaveAllocation
-from .email_verification_token import EmailVerificationToken
+#from .leave_allocation import LeaveAllocation
+#from .email_verification_token import EmailVerificationToken
 
 __all__ = [
     'User',
