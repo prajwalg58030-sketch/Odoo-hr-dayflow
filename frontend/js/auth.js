@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 Session.setToken(response.data.access_token);
                 Session.setUser(response.data.user);
                 if (response.data.user.must_change_password) {
-                    window.location.href = '../change-password.html';
+                    window.location.href = 'change-password.html';
                 } else {
-                    window.location.href = response.data.user.role === 'HR' ? '../admin/dashboard.html' : '../employee/dashboard.html';
+                    window.location.href = response.data.user.role === 'HR' ? 'admin/dashboard.html' : 'employee/dashboard.html';
                 }
             } catch (error) {
                 Notifications.show(error.message, 'error');
@@ -78,6 +78,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 Notifications.show(error.message, 'error');
                 btn.disabled = false;
                 btn.textContent = 'Create Account';
+            }
+        });
+    }
+
+    // Forced password change form
+    const changePasswordForm = document.getElementById('changePasswordForm');
+    if (changePasswordForm) {
+        changePasswordForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (newPassword !== confirmPassword) {
+                Notifications.show('Passwords do not match', 'error');
+                return;
+            }
+
+            const btn = document.getElementById('changePasswordBtn');
+            btn.disabled = true;
+            btn.textContent = 'Updating password...';
+            try {
+                await API.changePassword({
+                    current_password: document.getElementById('currentPassword').value,
+                    new_password: newPassword
+                });
+                Session.clear();
+                Notifications.show('Password updated. Please sign in again.', 'success');
+                setTimeout(() => window.location.href = 'login.html', 1200);
+            } catch (error) {
+                Notifications.show(error.message, 'error');
+                btn.disabled = false;
+                btn.textContent = 'Update Password';
             }
         });
     }

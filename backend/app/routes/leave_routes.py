@@ -4,12 +4,20 @@
 from flask import Blueprint, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from ..services.leave_service import LeaveService
+from ..models import LeaveType
 from ..schemas.leave_schema import LeaveApplySchema, LeaveRejectSchema
 from ..utils.response import success_response
 from ..utils.decorators import hr_required
 from marshmallow import ValidationError
 
 leave_bp = Blueprint('leaves', __name__)
+
+
+@leave_bp.route('/leave-types', methods=['GET'])
+@jwt_required()
+def get_leave_types():
+    leave_types = LeaveType.query.filter_by(active=True).order_by(LeaveType.name).all()
+    return success_response([leave_type.to_dict() for leave_type in leave_types])
 
 @leave_bp.route('/leaves', methods=['POST'])
 @jwt_required()

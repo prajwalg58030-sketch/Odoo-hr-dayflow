@@ -1,3 +1,5 @@
+//frontend/js/admin/employees.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 

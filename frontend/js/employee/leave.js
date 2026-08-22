@@ -2,13 +2,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     // Common functions
     const loadLeaveTypes = async () => {
-        // Since API doesn't have endpoint to get leave types directly, we'll hardcode for demo
-        // In production, you'd have an endpoint
-        return [
-            { id: 1, name: 'Paid Time Off' },
-            { id: 2, name: 'Sick Leave' },
-            { id: 3, name: 'Unpaid Leave' }
-        ];
+        const response = await API.getLeaveTypes();
+        return response.data;
     };
 
     // For apply-leave.html

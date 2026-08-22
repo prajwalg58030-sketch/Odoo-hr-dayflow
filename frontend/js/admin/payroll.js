@@ -1,3 +1,5 @@
+//frontend/js/admin/payroll.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 

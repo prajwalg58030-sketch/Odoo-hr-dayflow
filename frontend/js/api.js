@@ -40,6 +40,7 @@ class API {
     static getEmployeeAttendance(employeeId, params = '') { return this.request(`/attendance/employee/${employeeId}${params}`); }
 
     // Leaves
+    static getLeaveTypes() { return this.request('/leave-types'); }
     static applyLeave(data) { return this.request('/leaves', 'POST', data); }
     static getMyLeaves() { return this.request('/leaves/me'); }
     static getAllLeaves(params = '') { return this.request(`/leaves${params}`); }

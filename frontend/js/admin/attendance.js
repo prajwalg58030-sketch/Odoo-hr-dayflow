@@ -1,3 +1,4 @@
+//frontend/js/admin/attendance.js
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 

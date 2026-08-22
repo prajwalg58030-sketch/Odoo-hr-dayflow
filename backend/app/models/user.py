@@ -14,7 +14,6 @@ class User(db.Model):
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
     employee = db.relationship('Employee', backref='user', uselist=False)
-    verification_tokens = db.relationship('EmailVerificationToken', backref='user', lazy=True)
     
     def to_dict(self):
         return {

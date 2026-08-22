@@ -1,3 +1,5 @@
+//frontend/js/admin/salary-structure.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 

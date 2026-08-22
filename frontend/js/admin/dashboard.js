@@ -1,3 +1,5 @@
+//frontend/js/admin/dashboard.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 

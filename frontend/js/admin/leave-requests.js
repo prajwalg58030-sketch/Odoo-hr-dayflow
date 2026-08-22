@@ -1,3 +1,5 @@
+//frontend/js/admin/leave-requests.js
+
 document.addEventListener('DOMContentLoaded', async () => {
     if (!Session.requireHR()) return;
 
