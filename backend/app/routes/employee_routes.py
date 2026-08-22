@@ -1,26 +1,27 @@
 #app/routes/employee_routes.py
 
 from flask import Blueprint, request
-from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_jwt_extended import jwt_required
 from ..services.employee_service import EmployeeService
 from ..schemas.employee_schema import EmployeeCreateSchema, EmployeeUpdateSchema, EmployeeProfileUpdateSchema
 from ..utils.response import success_response
 from ..utils.decorators import hr_required
 from marshmallow import ValidationError
+from ..utils.security import get_current_identity
 
 employee_bp = Blueprint('employees', __name__)
 
 @employee_bp.route('/me', methods=['GET'])
 @jwt_required()
 def get_me():
-    identity = get_jwt_identity()
+    identity = get_current_identity()
     employee = EmployeeService.get_employee_by_user_id(identity['user_id'])
     return success_response(employee)
 
 @employee_bp.route('/me', methods=['PUT'])
 @jwt_required()
 def update_me():
-    identity = get_jwt_identity()
+    identity = get_current_identity()
     data = request.get_json()
     schema = EmployeeProfileUpdateSchema()
     try:
@@ -52,7 +53,7 @@ def create_employee():
 @employee_bp.route('/<int:employee_id>', methods=['GET'])
 @jwt_required()
 def get_employee(employee_id):
-    identity = get_jwt_identity()
+    identity = get_current_identity()
     employee = EmployeeService.get_employee(employee_id, identity)
     return success_response(employee)
 

@@ -2,7 +2,9 @@
 
 import os
 from dotenv import load_dotenv
+from flask_mail import Mail
 
+mail = Mail()
 load_dotenv()
 
 class MailConfig:

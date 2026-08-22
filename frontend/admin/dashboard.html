@@ -22,7 +22,15 @@
             <nav class="navbar" id="navbar"></nav>
             <main class="main-content">
                 <div class="page-header">
-                    <h1 class="page-title">Dashboard</h1>
+                    <div>
+                        <span class="dashboard-eyebrow">DAYFLOW CONTROL CENTER</span>
+                        <h1 class="page-title">Welcome to Admin / HR Dashboard</h1>
+                        <p class="page-date">Manage your workforce, attendance, leave, and payroll.</p>
+                    </div>
+                    <div class="page-actions">
+                        <a class="btn btn-outline" href="employees.html">View employees</a>
+                        <a class="btn btn-primary" href="leave-requests.html">Review requests</a>
+                    </div>
                 </div>
                 <div class="metric-grid" id="metricGrid">
                     <!-- Populated by dashboard.js -->
@@ -40,6 +48,14 @@
                 <div class="card">
                     <div class="card-header"><h3>Pending Leave Requests</h3></div>
                     <div class="card-body" id="pendingLeavesTable">Loading...</div>
+                </div>
+                <div class="dashboard-spotlight">
+                    <div>
+                        <span class="dashboard-eyebrow">KEEP THE DAY MOVING</span>
+                        <h2>Everything important, in one place.</h2>
+                        <p>Review team health, resolve leave requests, and keep payroll on schedule.</p>
+                    </div>
+                    <a class="btn btn-admin" href="attendance.html">Open attendance</a>
                 </div>
             </main>
         </div>

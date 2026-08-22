@@ -24,8 +24,15 @@
             <nav class="navbar" id="navbar"></nav>
             <main class="main-content">
                 <div class="page-header">
-                    <h1 class="page-title">Good morning, <span id="employeeName">Employee</span></h1>
-                    <p class="page-date" id="currentDate"></p>
+                    <div>
+                        <span class="dashboard-eyebrow">YOUR WORKDAY</span>
+                        <h1 class="page-title">Welcome to Employee Dashboard</h1>
+                        <p class="page-date">Good morning, <span id="employeeName">Employee</span> · <span id="currentDate"></span></p>
+                    </div>
+                    <div class="page-actions">
+                        <a class="btn btn-employee" href="attendance.html">View attendance</a>
+                        <a class="btn btn-outline" href="apply-leave.html">Apply for leave</a>
+                    </div>
                 </div>
                 <div class="dashboard-grid">
                     <!-- Cards will be populated by dashboard.js -->
@@ -51,7 +58,13 @@
                     </div>
                 </div>
                 <div class="dashboard-section">
-                    <h2>Recent Activity</h2>
+                    <div class="section-heading-row">
+                        <div>
+                            <span class="dashboard-eyebrow">YOUR TIMELINE</span>
+                            <h2>Recent Activity</h2>
+                        </div>
+                        <a href="attendance.html" class="text-link">View attendance →</a>
+                    </div>
                     <div id="recentActivity">Loading...</div>
                 </div>
             </main>

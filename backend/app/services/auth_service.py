@@ -1,4 +1,4 @@
-from flask_jwt_extended import create_access_token, get_jwt_identity
+from flask_jwt_extended import create_access_token
 
 from ..models import User, Employee
 from .. import db
@@ -6,7 +6,8 @@ from ..utils.security import (
     hash_password,
     verify_password,
     generate_temp_password,
-    generate_login_id
+    generate_login_id,
+    get_current_identity
 )
 from ..utils.validators import validate_email
 from ..errors.exceptions import APIError
@@ -202,8 +203,8 @@ class AuthService:
         # ========================================================
 
         access_token = create_access_token(
-            identity={
-                "user_id": user.id,
+            identity=str(user.id),
+            additional_claims={
                 "role": user.role,
                 "employee_id": employee_id
             }
@@ -252,7 +253,7 @@ class AuthService:
     @staticmethod
     def change_password(data):
 
-        identity = get_jwt_identity()
+        identity = get_current_identity()
 
         current_password = data.get("current_password")
         new_password = data.get("new_password")

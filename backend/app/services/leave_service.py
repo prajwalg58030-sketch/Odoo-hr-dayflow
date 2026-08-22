@@ -1,5 +1,5 @@
 from datetime import datetime, date
-from ..models import LeaveRequest, LeaveType, LeaveAllocation, Employee
+from ..models import LeaveRequest, LeaveType, Employee, LeaveAllocation
 from .. import db
 from ..errors.exceptions import APIError
 

@@ -1,6 +1,3 @@
-#app/config/database.py
-
-
 import os
 from dotenv import load_dotenv
 

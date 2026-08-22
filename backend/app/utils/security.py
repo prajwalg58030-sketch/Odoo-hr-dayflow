@@ -2,6 +2,18 @@ import bcrypt
 import secrets
 import string
 from datetime import datetime, timedelta
+from flask_jwt_extended import get_jwt, get_jwt_identity
+
+def get_current_identity():
+    identity = get_jwt_identity()
+    if isinstance(identity, dict):
+        return identity
+    claims = get_jwt()
+    return {
+        'user_id': int(identity),
+        'role': claims.get('role'),
+        'employee_id': claims.get('employee_id')
+    }
 
 def hash_password(password: str) -> str:
     salt = bcrypt.gensalt(rounds=12)

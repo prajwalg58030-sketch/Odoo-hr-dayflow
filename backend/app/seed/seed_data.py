@@ -36,7 +36,7 @@ def seed_data():
         password_hash=hash_password(os.getenv('DEMO_EMPLOYEE_PASSWORD', 'Employee@123')),
         role='EMPLOYEE',
         email_verified=True,
-        must_change_password=True
+        must_change_password=False
     )
     db.session.add(emp_user)
     db.session.flush()
